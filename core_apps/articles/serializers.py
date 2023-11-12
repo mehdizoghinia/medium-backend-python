@@ -78,6 +78,7 @@ class ArticleSerializer(serializers.ModelSerializer):
         article.tags.set(tags)
         return article
 
+
     def update(self, instance, validated_data):
         instance.author = validated_data.get("author", instance.author)
         instance.title = validated_data.get("title", instance.title)
