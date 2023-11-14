@@ -78,7 +78,6 @@ class ArticleSerializer(serializers.ModelSerializer):
         article.tags.set(tags)
         return article
 
-
     def update(self, instance, validated_data):
         instance.author = validated_data.get("author", instance.author)
         instance.title = validated_data.get("title", instance.title)
@@ -117,6 +116,7 @@ class ArticleSerializer(serializers.ModelSerializer):
             "created_at",
             "updated_at",
         ]
+
 
 class ClapSerializer(serializers.ModelSerializer):
     article_title = serializers.CharField(source="article.title", read_only=True)
