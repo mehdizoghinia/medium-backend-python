@@ -7,7 +7,6 @@ ADMINS = [("Mehdi Zoghinia", "mehdizowghi@gmail.com")]
 CSRF_TRUSTED_ORIGINS = []
 
 DEFAULT_FROM_EMAIL = env(
-    
     "DJANGO_DEFAULT_FROM_EMAIL",
     default="Authors Haven Support <support@trainingwebdev.com>",
 )
